@@ -20,9 +20,8 @@ The application trains an XGBoost regression model on sales data, saves the trai
 
 ### Prerequisites
 
-* Python 3.7+
+* Python 3.10+
 * Modal account and CLI installed
-* Docker (for building the Modal image)
 
 ### Installation
 
@@ -30,4 +29,36 @@ The application trains an XGBoost regression model on sales data, saves the trai
 
 ```bash
 git clone https://github.com/ChidambaramG/demand_forecasting_XGBoost.git  # Replace with your repo URL
-cd sales-prediction-api
+cd demand_forecasting_XGBoost
+```
+
+2. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+3. Configure Modal:
+
+```bash
+modal token new
+```
+
+4. Build and deploy the application:
+
+```bash
+modal deploy serve.py
+```
+
+5. Test the API:
+
+```bash
+curl --location '<your_modal_url>' \
+--header 'Content-Type: application/json' \
+--data '{
+    "start_date": "2018-01-01",
+    "end_date": "2018-01-8", 
+    "store": "1", 
+    "item": "9"  
+}'
+```

@@ -1,0 +1,8 @@
+modal
+pandas
+numpy
+pydantic
+scikit-learn
+xgboost
+joblib
+fastapi[standard]
