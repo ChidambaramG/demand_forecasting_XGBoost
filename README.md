@@ -29,5 +29,5 @@ The application trains an XGBoost regression model on sales data, saves the trai
 1. Clone the repository:
 
 ```bash
-git clone [https://github.com/](https://github.com/)<your_username>/sales-prediction-api.git  # Replace with your repo URL
+git clone https://github.com/ChidambaramG/demand_forecasting_XGBoost.git  # Replace with your repo URL
 cd sales-prediction-api
